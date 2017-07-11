@@ -1,0 +1,11 @@
+<% if @form == "personal" %>
+  <%= render "personal" form_method: :patch, url: "/resumes"%>
+<% elsif @form == "education" %>
+  <%= render "education" form_method: :patch, url: "/resumes"%>
+<% elsif @form == "capstone" %>
+  <%= render "capstone" form_method: :patch, url: "/resumes"%>
+<%elsif @form == "employment"%>
+  <%= render "employment" form_method: :patch, url: "/resumes"%>
+<% elsif @form == "skill"%>
+  <%= render "skill" form_method: :patch, url: "/resumes"%>
+<% end %>
