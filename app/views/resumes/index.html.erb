@@ -30,6 +30,7 @@
 
 <h1>Skills</h1>
 <p>Skill: <%= @skill.name %></p>
+
 <%= button_to "Back to home", "/home", method: :get %>
 <%= button_to "Edit Skill Section", "/resumes/edit/:skill", method: :get %>
 
@@ -39,6 +40,15 @@
 <p>Degree: <%= @education.degree %></p>
 <p>University: <%= @education.university %></p>
 <p>Details: <%= @education.details %></p>
+
 <%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit", "/resumes/edit/:education", method: :get %>
+<%= button_to "Edit Education", "/resumes/edit/:education", method: :get %>
+
+<h1>Capstone Information</h1>
+<p>Project Name: <%= @capstone.name %></p>
+<p>Description: <%= @capstone.description %></p>
+<p>URL: <%= @capstone.url %></p>
+<p>Screenshot: <%= @capstone.screenshot %></p>
+
+<%= button_to "Back to home", "/home", method: :get %>
 
