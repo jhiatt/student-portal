@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   #resume
   get '/resumes', to: 'resumes#index'
-  get '/resumes/edit', to: 'resumes#edit'
+  get '/resumes/edit/:form', to: 'resumes#edit'
   patch '/resumes', to: 'resumes#update'
   
 

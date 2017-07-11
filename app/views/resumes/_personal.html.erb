@@ -1,6 +1,7 @@
 <h1>Student Information</h1>
 <div>
   <p>Please enter the following information:</p>
+
   <%= form_tag url, method: form_method do %>
 <div>First Name: <input type= "text" value= "<%= @student.first_name %>" name="first_name"></div>
 <div>Last Name: <input type="text" value="<%= @student.last_name %>" name="last_name"></div>
