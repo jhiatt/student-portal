@@ -1,10 +1,10 @@
 class ResumesController < ApplicationController
   def index
-    @student = student.find_by
-    @employment
-    @skill
-    @education
-    @capstone
+    @student = student.find_by(:id)
+    @employment = @student.experiences
+    @skill = @student.experiences
+    @education = @student.experiences
+    @capstone = @student.experiences
     render "index.html.erb"
   end
 
