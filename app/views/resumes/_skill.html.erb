@@ -1,5 +1,6 @@
 <h1>Enter New Skill</h1>
-<%= form_tag "/dogs", method: :post do %>
-<div>Skill Name: <input type= "text" value= "<%= @skill.name %>" name="start_date"></div>
+
+<%= form_tag url, method: form_method do %>
+<div>Skill Name: <input type= "text" value= "<%= @skill.name %>" name="name"></div>
 <input type= "submit" value="Add Skill">
 <%end%>

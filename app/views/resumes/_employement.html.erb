@@ -1,8 +1,9 @@
 <h1>Enter New Employment Information</h1>
-<%= form_tag "/dogs", method: :post do %>
+
+<%= form_tag url, method: form_method do %>
 <div>Start Date: <input type= "text" value= "<%= @experience.start_date %>" name="start_date"></div>
 <div>End Date: <input type="text" value="<%= @experience.end_date %>" name="end_date"></div>
-<div>Job Title: <input type= "text" value= "<%=@experience.title %>" name="title"></div>
+<div>Job Title: <input type= "text" value= "<%=@experience.job_title %>" name="job_title"></div>
 <div>Company Name: <input type= "text" value= "<%= @experience.company %>" name="company"></div>
 <div>Details: <input type="text" value="<%= @experience.details %>" name="details"></div>
 <input type= "submit" value="Add Job Experience">
