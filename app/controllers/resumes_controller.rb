@@ -1,4 +1,9 @@
 class ResumesController < ApplicationController
+  def index
+    @student
+    @skill
+    @employment
+  end
 
   def edit
     @form = params[:form]
@@ -7,9 +12,8 @@ class ResumesController < ApplicationController
 
   def update
     if params[:personal]
-      Unirest.patch('http://localhost:3001/api/v1/', 
-                    headers: { "Accept" => "application/json" },
-                    parameters: {first_name: params[:first_name],
+      student = Student.find_by(id: params[:id])
+      student.update({first_name: params[:first_name],
                                 last_name: params[:last_name],
                                 email: params[:email],
                                 phone: params[:phone_number],
@@ -22,8 +26,8 @@ class ResumesController < ApplicationController
                                 avatar: params[:photo],
                                 password: params[:password],
                                 password_confimation: params[:password_confirmation],
-                                }
-                    )
+                                })
+      
     end
     if params[:skill]
       Unirest.patch('http://localhost:3001/api/v1/',
