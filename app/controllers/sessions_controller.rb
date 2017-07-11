@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    Unirest.post('http://localhost:3001/api/v1', 
+    Unirest.post('http://localhost:3001/api/v1/login', 
             headers:{ "Accept" => "application/json" }, 
             parameters:{ email: params[:email], password: params[:password] }
               )
@@ -13,10 +13,7 @@ class SessionsController < ApplicationController
 
 
   def destroy
-    Unirest.delete('http://localhost:3001/api/v1/', 
-                  headers: { "Accept" => "application/json" },
-                  parameters: nil
-                  )
+
     redirect_to "/"
   end
 end
