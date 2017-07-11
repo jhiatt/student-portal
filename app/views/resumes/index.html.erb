@@ -15,30 +15,40 @@
 <p>Password: <%= @student.password %></p>
 
 <%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit Personal Information", "/resumes/edit/:personal", method: :get %>
+<%= button_to "Edit Personal Information", "/resumes/edit/personal", method: :get %>
 
 <h1>Employment Experience</h1>
-<p>Name: <%= @employment.name %></p>
-<p>Start Date: <%= @employment.start_time %></p>
-<p>End Date: <%= @employment.end_time %></p>
-<p>Job Title: <%= @employment.job_title %></p>
-<p>Company: <%= @employment.company %></p>
-<p>Details: <%= @employment.details %></p>
+<p>Name: <%= @employment['name'] %></p>
+<p>Start Date: <%= @employment['start_time'] %></p>
+<p>End Date: <%= @employment['end_time'] %></p>
+<p>Job Title: <%= @employment['job_title'] %></p>
+<p>Company: <%= @employment['company'] %></p>
+<p>Details: <%= @employment['details'] %></p>
 
 <%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit Employement Experience", "/resumes/edit/:employment", method: :get %>
+<%= button_to "Edit Employement Experience", "/resumes/edit/employment", method: :get %>
 
 <h1>Skills</h1>
-<p>Skill: <%= @skill.name %></p>
+<p>Skill: <%= @skill['name'] %></p>
+
 <%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit Skill Section", "/resumes/edit/:skill", method: :get %>
+<%= button_to "Edit Skill Section", "/resumes/edit/skill", method: :get %>
 
 <h1>Education</h1>
-<p>Enrollment Year: <%= @education.start_time %></p>
-<p>Graduation Date: <%= @education.end_time %></p>
-<p>Degree: <%= @education.degree %></p>
-<p>University: <%= @education.university %></p>
-<p>Details: <%= @education.details %></p>
-<%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit", "/resumes/edit/:education", method: :get %>
+<p>Enrollment Year: <%= @education['start_time'] %></p>
+<p>Graduation Date: <%= @education['end_time'] %></p>
+<p>Degree: <%= @education['degree'] %></p>
+<p>University: <%= @education['university'] %></p>
+<p>Details: <%= @education['details'] %></p>
 
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit Education", "/resumes/edit/education", method: :get %>
+
+<h1>Capstone Information</h1>
+<p>Project Name: <%= @capstone['name'] %></p>
+<p>Description: <%= @capstone['description ']%></p>
+<p>URL: <%= @capstone['url'] %></p>
+<p>Screenshot: <%= @capstone['screenshot'] %></p>
+
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit Capstone", "/resumes/edit/capstone", method: :get %>
