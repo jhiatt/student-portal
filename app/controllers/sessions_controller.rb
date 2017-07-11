@@ -9,12 +9,12 @@ class SessionsController < ApplicationController
             parameters:{ email: params[:email], password: params[:password] }
               ).body)
     session[:user] = student
-    redirect_to "/resumes"
+    redirect_to "resumes#index"
   end
 
 
   def destroy
     session[:user_id] = nil
-    redirect_to "/sign_in"
+    render "/sign_in"
   end
 end

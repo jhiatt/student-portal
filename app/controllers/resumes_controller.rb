@@ -1,8 +1,11 @@
 class ResumesController < ApplicationController
   def index
-    @student
-    @skill
+    @student = student.find_by
     @employment
+    @skill
+    @education
+    @capstone
+    render "index.html.erb"
   end
 
   def edit
@@ -63,6 +66,14 @@ class ResumesController < ApplicationController
                                     details: params[:details]
                         }
     end
+    if params[:capstone]
+          Unirest.patch('http://localhost:3001/api/v1/', 
+                              headers: { "Accept" => "application/json" },
+                              parameters: {name: params[:name],
+                          description: params[:description],
+                          URL: params[:url],
+                          Screenshot: params[:screenshot],
+          }
     redirect_to '/resumes'
   end
 end
