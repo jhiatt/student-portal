@@ -1,26 +1,42 @@
-<h1>Welcome, <%= current_user.name%>!</h1>
-<p>Below is your resume information:</p>
-<div>
-  <h3>Experience</h3>
-  <ul>
-    <li>Start Date</li>
-    <li>End Date</li>
-    <li>Job Title</li>
-    <li>Company Name</li>
-    <li>Details:</li>
-  </ul>
-</div>
-<div>
-  <h3>Skills</h3>
-  <ul>
-    <li>Start Date</li>
-  </ul>
-</div>
-<div>
-  <ul>
-    <li>Name</li>
-    <li>Description</li>
-    <li>URL</li>
-    <li>Screenshot</li>
-  </ul>
-</div>
+<h1>Welcome, <%= current_user.first_name%>!</h1>
+<p>Below is your current personal information:</p>
+<p>First Name: <%= @student.first_name %></p>
+<p>Last Name: <%= @student.last_name %></p>
+<p>Email: <%= @student.email %></p>
+<p>Phone: <%= @student.phone_number %></p>
+<p>Bio: <%= @student.bio%></p>
+<p>LinkedIn URL: <%= @student.link_in %></p>
+<p>Twitter Handle: <%= @student.twitter %></p>
+<p>Personal Website URL: <%= @student.website %></p>
+<p>Resume URL: <%= @student.resume_url %></p>
+<p>Github URL: <%= @student.github_url %></p>
+<p>Photo/Avatar: <%= @student.avatar %></p>
+<p>Password: <%= @student.password %></p>
+
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit Personal Information", "/resumes/edit/:personal", method: :get %>
+
+<h1>Employment Experience</h1>
+<p>Name: <%= @employment.name %></p>
+<p>Start Date: <%= @employment.start_time %></p>
+<p>End Date: <%= @employment.end_time %></p>
+<p>Job Title: <%= @employment.job_title %></p>
+<p>Company: <%= @employment.company %></p>
+<p>Details: <%= @employment.details %></p>
+
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit Employement Experience", "/resumes/edit/:employment", method: :get %>
+
+<h1>Skills</h1>
+<p>Skill: <%= @skill.name %></p>
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit Skill Section", "/resumes/edit/:skill", method: :get %>
+
+<h1>Education</h1>
+<p>Enrollment Year: <%= @education.start_time %></p>
+<p>Graduation Date: <%= @education.end_time %></p>
+<p>Degree: <%= @education.degree %></p>
+<p>University: <%= @education.university %></p>
+<p>Details: <%= @education.details %></p>
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit", "/resumes/edit/:education", method: :get %>
