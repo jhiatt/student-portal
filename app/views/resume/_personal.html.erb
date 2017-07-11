@@ -1,0 +1,19 @@
+<h1>Student Information</h1>
+<div>
+  <p>Please enter the following information:</p>
+  <%= form_tag "/new", method: :post do %>
+<div>First Name: <input type= "text" value= "<%= @student.first_name %>" name="first_name"></div>
+<div>Last Name: <input type="text" value="<%= @student.last_name %>" name="last_name"></div>
+<div>Email: <input type= "text" value= "<%=@student.email %>" name="email"></div>
+<div>Phone Number: <input type= "text" value= "<%= @student.phone_number %>" name="phone_number"></div>
+<div>Short Bio: <input type="text" value="<%= @student.bio %>" name="bio"></div>
+<div>LinkedIn URL: <input type= "text" value= "<%=@student.linked_in %>" name="linked_in"></div>
+<div>Twitter Handle: <input type="text" value="<%= @student.twitter %>" name="twitter"></div>
+<div>Personal Blog/Website URL: <input type= "text" value= "<%=@student.website %>" name="website"></div>
+<div>Online Resume URL: <input type="text" value="<%= @student.resume_url %>" name="resume_url"></div>
+<div>Github URL: <input type= "text" value= "<%=@student.github_url %>" name="github_url"></div>
+<div>Photo: <input type="text" value="<%= @student.photo %>" name="photo"></div>
+<div>Password: <input type="text" value="<%= @student.password %>" name="password"></div>
+<input type= "submit" value="Submit">
+<%end%>
+</div>

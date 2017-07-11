@@ -1,0 +1,10 @@
+
+<h1>Enter New Education Information</h1>
+<%= form_tag "/dogs", method: :post do %>
+<div>Start Date: <input type= "text" value= "<%= @education.start_date %>" name="start_date"></div>
+<div>End Date: <input type="text" value="<%= @education.end_date %>" name="end_date"></div>
+<div>Degree: <input type= "text" value= "<%=@education.degree %>" name="degree"></div>
+<div>University Name: <input type= "text" value= "<%= @education.name %>" name="name"></div>
+<div>Details: <input type="text" value="<%= @education.details %>" name="details"></div>
+<input type= "submit" value="Add Education">
+<%end%>
