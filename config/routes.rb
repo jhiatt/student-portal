@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/', to: 'sessions#create'
   get '/:id', to: 'sessions#show'
   delete '/:id', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
   #resume
   get '/resumes', to: 'resumes#index'

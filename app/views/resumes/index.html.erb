@@ -1,3 +1,4 @@
+
 <h1>Welcome, <%= current_user.first_name%>!</h1>
 <p>Below is your current personal information:</p>
 <p>First Name: <%= @student.first_name %></p>
@@ -50,4 +51,4 @@
 <p>Screenshot: <%= @capstone.screenshot %></p>
 
 <%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit Capstone Information", "/resumes/edit/:capstone", method: :get %>
+

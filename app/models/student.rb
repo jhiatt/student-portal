@@ -1,7 +1,2 @@
-class Account < ApplicationRecord
-
-
-
-
-
+class Student
 end
