@@ -1,0 +1,10 @@
+<h3>Please Sign In</h3>
+
+<div>
+  <%= form_tag "/", method: :post do %>
+  <p>Email: <input type="text" name="email"></p>
+  <p>Password: <input type="text" name="password"></p>
+  <p><input type="submit" value="Enter"></p>
+  <% end %>
+</div>
+

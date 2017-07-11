@@ -4,7 +4,16 @@ Rails.application.routes.draw do
   get '/sign_in', to: 'sessions#new'
   post '/', to: 'sessions#create'
   get '/:id', to: 'sessions#show'
-  get '/:id/edit', to: 'sessions#edit'
-  patch '/', to: 'sessions#update'
+  delete '/:id', to: 'sessions#destroy'
+
+  #resume
+  get '/resumes', to: 'resumes#index'
+  get '/resumes/edit', to: 'resumes#edit'
+  patch '/resumes', to: 'resumes#update'
+  
+
+
+
+
 
 end
